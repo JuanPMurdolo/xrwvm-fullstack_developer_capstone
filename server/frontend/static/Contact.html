@@ -8,31 +8,33 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #20B2AA;">
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
     <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Best Cars Dealership</h2>
+      <h2 style="padding-right: 5%;">Dealerships</h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">About Us</a>
+            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/contact">Contact Us</a>
+            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="banner">
-    <h1>Contact Us</h1>
-    <p>If you have any inquiries or would like to learn more about our available vehicles, feel free to reach out to us using the contact details below!</p>
+  <!-- Banner Section -->
+  <div class="banner" style="text-align: center; padding: 2em;">
+    <h1 class="small_header" style="font-size: 3em; color: rgb(97, 64, 128);">Contact Us</h1>
+    <p class="homepage_links" style="font-size: 1.2em; color: rgb(97, 64, 128);">If you have any inquiries or would like to learn more about our available vehicles, feel free to reach out to us using the contact details below!</p>
   </div>
 
   <div class="row">
@@ -72,23 +74,27 @@
     </div>
   </div>
 
-  <div class="form_panel">
-    <h3 class="small_header">Send Us a Message</h3>
+  <!-- Contact Form -->
+  <div class="form_panel" style="background-color: white; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);">
+    <h3 class="small_header" style="font-size: 2.5em; color: rgb(97, 64, 128);">Send Us a Message</h3>
     <form>
       <div class="input_panel">
-        <input type="text" class="form-control" placeholder="Your Name" required>
+        <input type="text" class="form-control" placeholder="Your Name" required />
       </div>
       <div class="input_panel">
-        <input type="email" class="form-control" placeholder="Your Email" required>
+        <input type="email" class="form-control" placeholder="Your Email" required />
       </div>
       <div class="input_panel">
         <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
       </div>
       <div class="input_panel">
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" style="background-color: rgb(97, 64, 128);">Send Message</button>
       </div>
     </form>
   </div>
+
+</body>
+</html>
 
 </body>
 </html>
