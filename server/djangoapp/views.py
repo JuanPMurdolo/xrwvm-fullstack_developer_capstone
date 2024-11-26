@@ -15,7 +15,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
 from .models import CarMake, CarModel, CarDealer
-from .restapis import get_dealers_from_cf, get_dealer_reviews_from_cf, post_request, get_review_id
+from .restapis import get_dealers_from_cf
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -95,7 +95,7 @@ def get_dealerships(request):
         # Concat all dealer's short name
         context['dealerships'] = dealerships
         # Return a list of dealer short name
-        return render(request, 'djangoapp/index.html', context)
+        return JsonResponse({'dealerships': dealerships})
 
 
 

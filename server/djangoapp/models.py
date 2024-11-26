@@ -41,7 +41,7 @@ class CarModel(models.Model):
     
 
 class CarDealer:
-    def __init__(self, address, city, full_name, id, lat, long, short_name, st, zip):
+    def __init__(self, address, city, full_name, id, lat, long, short_name, zip):
         self.address = address
         self.city = city
         self.full_name = full_name
@@ -49,8 +49,19 @@ class CarDealer:
         self.lat = lat
         self.long = long
         self.short_name = short_name
-        self.st = st
         self.zip = zip
     def __str__(self):
         return "Dealer name: " + self.full_name
+
+    def to_dict(self):
+        return {
+            "address": self.address,
+            "city": self.city,
+            "full_name": self.full_name,
+            "id": self.id,
+            "lat": self.lat,
+            "long": self.long,
+            "short_name": self.short_name,
+            "zip": self.zip,
+        }
    
