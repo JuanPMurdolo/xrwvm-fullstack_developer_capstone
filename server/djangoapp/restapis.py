@@ -43,7 +43,8 @@ def get_request(url, **kwargs):
 
 def get_dealers_from_cf(**kwargs):
     results = []
-    json_result = get_request(backend_url)
+    url = "http://localhost:3030"
+    json_result = get_request(url)
     if json_result:
         dealers = json_result
         for dealer in dealers:
