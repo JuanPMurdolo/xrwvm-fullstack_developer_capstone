@@ -14,12 +14,11 @@ import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
-from .models import CarMake, CarModel
-
+from .models import CarMake, CarModel, CarDealer
+from .restapis import get_dealers_from_cf, get_dealer_reviews_from_cf, post_request, get_review_id
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
-
 
 # Create your views here.
 def get_cars(request):
@@ -89,8 +88,17 @@ def registration(request):
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
 def get_dealerships(request):
+    
     context = {}
-    return render(request, 'djangoapp/index.html', context)
+
+    if request.method == "GET":
+        # Get dealers from the URL
+        dealerships = get_dealers_from_cf()
+        # Concat all dealer's short name
+        context['dealerships'] = dealerships
+        # Return a list of dealer short name
+        return render(request, 'djangoapp/index.html', context)
+
 
 
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
