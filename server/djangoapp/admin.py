@@ -12,7 +12,7 @@ class CarMakeAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_filter = ('established',)
     inlines = [CarModelInline]
-
+    
 class CarModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'car_make', 'type', 'year', 'dealer_id')
     search_fields = ('name', 'car_make__name')
