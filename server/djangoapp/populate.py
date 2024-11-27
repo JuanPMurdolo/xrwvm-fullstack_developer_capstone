@@ -4,16 +4,16 @@ from .models import CarMake, CarModel
 def initiate():
     # Create CarMake instances
     car_make_data = [
-        {"name": "NISSAN", 
+        {"name": "NISSAN",
          "description": "Great cars. Japanese technology"},
         {"name": "Mercedes",
         "description": "Great cars. German technology"},
-        {"name": "Audi", 
-         "description": 
+        {"name": "Audi",
+         "description":
          "Great cars. German technology"},
-        {"name": "Kia", 
+        {"name": "Kia",
          "description": "Great cars. Korean technology"},
-        {"name": "Toyota", 
+        {"name": "Toyota",
          "description": "Great cars. Japanese technology"},
     ]
 
@@ -27,35 +27,35 @@ def initiate():
 
     # Create CarModel instances with corresponding CarMake
     car_model_data = [
-        {"name": "Pathfinder", "type": "SUV", "year": 
+        {"name": "Pathfinder", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[0]},
-        {"name": "Qashqai", "type": "SUV", "year": 
+        {"name": "Qashqai", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[0]},
-        {"name": "XTRAIL", "type": "SUV", "year": 
+        {"name": "XTRAIL", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[0]},
-        {"name": "A-Class", "type": "SUV", "year": 
+        {"name": "A-Class", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[1]},
-        {"name": "C-Class", "type": "SUV", "year": 
+        {"name": "C-Class", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[1]},
-        {"name": "E-Class", "type": "SUV", "year": 
+        {"name": "E-Class", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[1]},
-        {"name": "A4", "type": "SUV", "year": 
+        {"name": "A4", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[2]},
-        {"name": "A5", "type": "SUV", "year": 
+        {"name": "A5", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[2]},
-        {"name": "A6", "type": "SUV", "year": 
+        {"name": "A6", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[2]},
-        {"name": "Sorrento", "type": "SUV", "year": 
+        {"name": "Sorrento", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[3]},
-        {"name": "Carnival", "type": "SUV", "year": 
+        {"name": "Carnival", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[3]},
-        {"name": "Cerato", "type": "Sedan", "year": 
+        {"name": "Cerato", "type": "Sedan", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[3]},
-        {"name": "Corolla", "type": "Sedan", "year": 
+        {"name": "Corolla", "type": "Sedan", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[4]},
-        {"name": "Camry", "type": "Sedan", "year": 
+        {"name": "Camry", "type": "Sedan", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[4]},
-        {"name": "Kluger", "type": "SUV", "year": 
+        {"name": "Kluger", "type": "SUV", "year":
          datetime.date(2023, 1, 1), "car_make": car_make_instances[4]},
     ]
 
