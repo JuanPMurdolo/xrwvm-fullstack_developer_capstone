@@ -1,10 +1,9 @@
-
-
 from django.db import models
+
 
 class CarMake(models.Model):
     name = models.CharField(null=False, max_length=30, default='Car Make')
-    description = models.CharField(null=False, 
+    description = models.CharField(null=False,
                                    max_length=1000, default='Description')
     established = models.DateField(null=True)
     
@@ -14,10 +13,10 @@ class CarMake(models.Model):
                "Established: " + str(self.established)
 
 class CarModel(models.Model):
-    car_make = models.ForeignKey(CarMake, 
+    car_make = models.ForeignKey(CarMake,
                                  on_delete=models.CASCADE)
     dealer_id = models.IntegerField(null=False)
-    name = models.CharField(null=False, 
+    name = models.CharField(null=False,
                             max_length=30, default='Car Model')
     CAR_TYPES = [
         ('Sedan', 'Sedan'),
@@ -25,7 +24,7 @@ class CarModel(models.Model):
         ('Truck', 'Truck'),
         ('Coupe', 'Coupe'),
     ]
-    type = models.CharField(null=False, max_length=30, 
+    type = models.CharField(null=False, max_length=30,
                             choices=CAR_TYPES, default='Sedan')
     year = models.DateField(null=True)
     
@@ -37,7 +36,7 @@ class CarModel(models.Model):
                "Year: " + str(self.year)
 
 class CarDealer:
-    def __init__(self, address, city, full_name, 
+    def __init__(self, address, city, full_name,
                  id, lat, long, short_name, zip):
         self.address = address
         self.city = city

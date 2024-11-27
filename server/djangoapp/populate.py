@@ -1,6 +1,7 @@
 import datetime
 from .models import CarMake, CarModel
 
+
 def initiate():
     # Create CarMake instances
     car_make_data = [
@@ -9,8 +10,7 @@ def initiate():
         {"name": "Mercedes",
         "description": "Great cars. German technology"},
         {"name": "Audi",
-         "description":
-         "Great cars. German technology"},
+         "description": "Great cars. German technology"},
         {"name": "Kia",
          "description": "Great cars. Korean technology"},
         {"name": "Toyota",
@@ -20,7 +20,7 @@ def initiate():
     # Create CarMake entries
     car_make_instances = [
         CarMake.objects.create(
-            name=data["name"], 
+            name=data["name"],
             description=data["description"]
         ) for data in car_make_data
     ]
