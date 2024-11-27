@@ -8,7 +8,7 @@ def initiate():
         {"name": "NISSAN",
          "description": "Great cars. Japanese technology"},
         {"name": "Mercedes",
-        "description": "Great cars. German technology"},
+         "description": "Great cars. German technology"},
         {"name": "Audi",
          "description": "Great cars. German technology"},
         {"name": "Kia",
@@ -62,8 +62,8 @@ def initiate():
     # Create CarModel entries
     for data in car_model_data:
         CarModel.objects.create(
-            name=data["name"], 
-            car_make=data["car_make"], 
-            type=data["type"], 
+            name=data["name"],
+            car_make=data["car_make"],
+            type=data["type"],
             year=data["year"]
         )

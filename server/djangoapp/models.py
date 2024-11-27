@@ -6,11 +6,12 @@ class CarMake(models.Model):
     description = models.CharField(null=False,
                                    max_length=1000, default='Description')
     established = models.DateField(null=True)
-    
+
     def __str__(self):
         return "Name: " + self.name + "," + \
                "Description: " + self.description + "," + \
                "Established: " + str(self.established)
+
 
 class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake,
@@ -27,13 +28,14 @@ class CarModel(models.Model):
     type = models.CharField(null=False, max_length=30,
                             choices=CAR_TYPES, default='Sedan')
     year = models.DateField(null=True)
-    
+
     def __str__(self):
         return "Car Make: " + self.car_make.name + "," + \
                "Dealer ID: " + str(self.dealer_id) + "," + \
                "Name: " + self.name + "," + \
                "Type: " + self.type + "," + \
                "Year: " + str(self.year)
+
 
 class CarDealer:
     def __init__(self, address, city, full_name,
@@ -46,7 +48,8 @@ class CarDealer:
         self.long = long
         self.short_name = short_name
         self.zip = zip
-    
+
     def __str__(self):
         return "Dealer name: " + self.full_name
-   
+
+
