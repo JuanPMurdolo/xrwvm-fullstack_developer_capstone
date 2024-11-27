@@ -112,7 +112,7 @@ def get_dealer_reviews(request, dealer_id):
     for review in reviews:
         sentiment = analyze_review_sentiments(review["review"])
         print(sentiment)
-        review["sentiment"] = sentiment["sentiment"]
+        review["dominant_emotion"] = sentiment['dominant_emotion']
 
     return JsonResponse({"status": 200, "reviews": reviews})
 
